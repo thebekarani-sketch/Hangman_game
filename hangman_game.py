@@ -19,7 +19,8 @@ while attempts>0:
 
      #check if the player has guessed the whole word
     if "_" not in display_word:
-        print("Congratulations! You've guessed the word:", word)
+        print("\nCongratulations! \nYou've guessed the word correctly!")
+        print("The word is: ", word)
         break
     
     #getting player's guess
@@ -46,3 +47,7 @@ while attempts>0:
         attempts-=1
         print("Attempts left:", attempts) 
 
+#after the player runs out of attempts, revealing the word  
+if attempts==0:
+    print("Game Over!\n The word is: ", word)
+    print("Better luck next time!") 
