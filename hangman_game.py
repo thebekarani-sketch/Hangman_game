@@ -35,7 +35,14 @@ while attempts>0:
         print("You've already guessed that letter.")
         continue
     
-    #add the guessed letter to the list
+    #adding the guessed letter to the list
     guessed_letters.append(guess)
     
-   
+    #checking if the guessed letter is in the guessed word
+    if guess in word.upper():
+        print("Correct guess!")    
+    else:
+        print("Wrong guess!,Try again.")
+        attempts-=1
+        print("Attempts left:", attempts) 
+
